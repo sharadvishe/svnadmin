@@ -90,5 +90,5 @@ catch (Exception $ex) {
 
 SetValue("UserList", $users);
 SetValue("AccessPathList", $list);
-ProcessTemplate("accesspath/accesspathlist.html.php");
+ProcessTemplate("accesspath/userperm.html.php");
 ?>
