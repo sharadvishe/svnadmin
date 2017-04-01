@@ -34,9 +34,7 @@ $(document).ready(function(){
 		$oUser->id = $u->getEncodedName();
 		$oUser->name = $u->getEncodedName();
 		$paths = $appEngine->getAccessPathViewProvider()->getPathsOfUser( $oUser );
-		$len_access_paths = sizeof($paths);
 		SetValue("PathList", $paths);
-		if ($len_access_paths > 0){
 		?>
 
                 <tr>
@@ -61,7 +59,7 @@ $(document).ready(function(){
                   </td>
                 </tr>
 
-                <?php }} ?>
+                <?php } ?>
 
       </tbody>
       </table>
