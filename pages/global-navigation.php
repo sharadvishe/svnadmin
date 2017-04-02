@@ -41,11 +41,7 @@
     </li>
     <?php } ?>
 
-    <?php if (IsProviderActive(PROVIDER_ACCESSPATH_VIEW) && (HasAccess(ACL_MOD_ACCESSPATH, ACL_ACTION_VIEW) || HasAccess(ACL_MOD_ACCESSPATH, ACL_ACTION_ADD) || HasAccess(ACL_MOD_ACCESSPATH, ACL_ACTION_ASSIGN))) { ?>
-  <a href="userperm.php"><?php Translate("Permissions"); ?></a>
-    
-    <?php } ?>
-
+   <li><a href="userperm.php"><?php Translate("Permissions"); ?></a></li>
 
 
     <?php if (IsViewUpdateable() && HasAccess(ACL_MOD_UPDATE, ACL_ACTION_SYNCHRONIZE) && AppEngine()->getConfig()->getValueAsBoolean('GUI', 'AllowUpdateByGui', true)) {?>

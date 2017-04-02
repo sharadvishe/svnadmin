@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>iF.SVNAdmin | Login</title>
+	<title>SVNAdmin | Login</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="Author" content="Manuel Freiholz, insaneFactory.com">
 	<link rel="stylesheet" type="text/css" href="templates/ifappstyle.css">
@@ -13,7 +13,7 @@
 
 		<div id="header">
 			<img src="templates/images/logo.png" width="24" height="40" border="0" alt="iF-Logo" title="insaneFactory - Subversion administration">
-			<h1><a href="http://www.insanefactory.com/">iF.SVNAdmin</a></h1>
+			<h1><a href="http://www.insanefactory.com/">SVNAdmin Console</a></h1>
 		</div>
 
 		<div style="padding:20px;">
@@ -59,14 +59,13 @@
 					<input type="password" name="loginpass" id="loginpass" class="lineedit"><br>
 
 					<div class="formsubmit">
-						<input type="submit" name="login" value="<?php Translate("Login"); ?>" class="addbtn">
+						<center>		
+							<input type="submit" name="login" value="<?php Translate("Login"); ?>" class="addbtn">
+						</center>
 					</div>
 				</form>
 			</div>
 
-		<?php foreach (GetArrayValue("LocaleList") as $l): ?>
-			<a href="<?php PrintCurrentScriptName(); ?>?locale=<?php print($l->getLocale()); ?>" title="<?php Translate("Translated by"); ?> <?php print($l->getAuthor()); ?>"><img src="templates/flags/<?php print($l->getLocale()); ?>.png" alt="<?php print($l->getName()); ?>"><?php print($l->getName()); ?></a>
-		<?php endforeach; ?>
 		</div>
 	</div>
 </div>

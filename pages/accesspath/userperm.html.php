@@ -8,8 +8,8 @@ $(document).ready(function(){
 });
 </script>
 
-<h1><?php Translate("Access-Path management"); ?></h1>
-<p class="hdesc"><?php Translate("Here you can see a list of all access path, which are defined in your subversion configuration."); ?></p>
+<h1><?php Translate("Access-Path Permissions"); ?></h1>
+<p class="hdesc"><?php Translate("Here you can see a list of all users, access paths and there permissions."); ?></p>
 
 <?php HtmlFilterBox("accesspathlist", 1); ?>
 
@@ -44,8 +44,10 @@ $(document).ready(function(){
 
                   <td>
                         <table>
-                                 <?php foreach (GetArrayValue("PathList") as $ap) { ?>                              
+                                 <?php foreach (GetArrayValue("PathList") as $ap) { ?>
+					<div>
 					  <a href="accesspathview.php?accesspath=<?php print($ap->getEncodedPath()); ?>"><?php print($ap->getPath()); ?></a><br>
+					</div>
                                  <?php } ?>
 
                         </table>
