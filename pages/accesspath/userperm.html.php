@@ -44,8 +44,8 @@ $(document).ready(function(){
 
                   <td>
                         <table>
-                                 <?php foreach (GetArrayValue("PathList") as $ap) { ?>
-                                         <?php print($ap->path); ?>  </br>
+                                 <?php foreach (GetArrayValue("PathList") as $ap) { ?>                              
+					  <a href="accesspathview.php?accesspath=<?php print($ap->getEncodedPath()); ?>"><?php print($ap->getPath()); ?></a><br>
                                  <?php } ?>
 
                         </table>
@@ -54,7 +54,7 @@ $(document).ready(function(){
                   <td>
                         <table>
                                  <?php foreach (GetArrayValue("PathList") as $ap) { ?>
-                                        <?php print($ap->perm); ?>  </br>
+                                       <?php print($ap->perm); ?>  </br>
                                  <?php } ?>
 
                         </table>
